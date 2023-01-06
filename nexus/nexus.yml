@@ -1,0 +1,16 @@
+version: '3'
+services:
+  redis:
+    image: sonatype/nexus3:3.38.0
+    container_name: nexus3
+    volumes:
+      - ./data:/nexus-data
+    ports:
+      - 8081:8081
+      - 8082:8082
+      - 8083:8083
+      - 8084:8084
+
+# http://localhost:8081/repository/nuget-hosted/
+# dotnet pack D:\pm\src\dotnet\payfun.dotnet.aspnetcore\payfun.dotnet.netcore.csproj -c release -p:PackageVersion=2.2.6 --output D:\pm\src\dotnet\payfun.dotnet.aspnetcore\nupkgs
+# nuget push D:\pm\src\dotnet\payfun.dotnet.aspnetcore\nupkgs\payfun.dotnet.netcore.2.2.6.nupkg -source http://localhost:8081/repository/nuget-hosted/

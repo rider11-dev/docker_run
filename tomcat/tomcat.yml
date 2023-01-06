@@ -1,0 +1,12 @@
+version: '3'
+services:
+  tomcat:
+    image: tomcat:9.0.65-jre8
+    container_name: tomcat
+    volumes:
+      - ./conf/server.xml:/usr/local/tomcat/conf/server.xml
+      - ./logs:/usr/local/tomcat/logs
+      - ./webapps:/usr/local/tomcat/webapps
+      # - /etc/localtime:/etc/localtime:ro
+    ports:
+      - 8888:8080

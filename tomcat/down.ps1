@@ -1,0 +1,1 @@
+docker-compose -f tomcat.yml down

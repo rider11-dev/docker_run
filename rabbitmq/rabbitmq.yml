@@ -1,0 +1,25 @@
+version: '3'
+services:
+  rabbitmq:
+    image: rabbitmq:3.9-management
+    container_name: rabbitmq
+    # restart: always
+    hostname: rabbitmq_host
+    ports:
+      - 15672:15672
+      - 5672:5672
+      - 15692:15692 # /metrics
+      - 11883:1883 # mqtt
+      - 18883:8883 # mqtts
+      - 15675:15675 # websocket,mqtt-web端口
+    volumes:
+      - ./log:/var/log/rabbitmq
+      - ./data:/var/lib/rabbitmq
+      - ./conf:/etc/rabbitmq
+    environment:
+      - RABBITMQ_DEFAULT_USER=root
+      - RABBITMQ_DEFAULT_PASS=root
+
+# docker exec rabbitmq rabbitmq-plugins enable rabbitmq_mqtt rabbitmq_web_mqtt rabbitmq_event_exchange
+
+

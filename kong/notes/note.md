@@ -1,0 +1,54 @@
+- basic
+    - restfulapi
+    - kong gateway
+        - openresty
+            - lua-nginx-module
+    - plugins
+        - enable/disable at runtime
+- ports
+    - 8000=>http api
+    - 8001=>admin api
+    - 8443=>https api
+    - 8444=>https admin api
+
+- service
+    - 1个service可定义多个route
+    - 添加service
+        - 8001/services
+        - post+form-data
+    - 添加route
+        - 8001/services/服务名/routes
+        - post+form-data
+
+- plugin
+    - 8001/services/服务名/plugins
+    - post+form-data
+
+- consumer
+    - add
+        - 8001/consumers
+        - post+form-data
+
+- configure
+    - 默认/etc/kong/kong.conf.default
+    - /etc/kong/kong.conf
+    - /etc/kong.conf
+    - 环境变量
+        - log_level=>KONG_LOG_LEVEL
+    - database
+        - postgres
+            - pg_
+        - cassandra
+            - 将要废弃
+        - off
+            - 8001/config
+        - cache
+            - db_update_frequency/s,default 5
+            - db_cache_ttl/s,default 0(never expire)
+            - db_cache_warmup_entities,default services
+        - dns resolver
+            - dns_resolver,default none=>/etc/resolv.conf
+            - dns_hostfile,default /etc/hosts,修改后需要kong reload
+- metrics
+    - http://localhost:8001/plugins
+    - name=prometheus

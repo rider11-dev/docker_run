@@ -1,0 +1,1 @@
+docker-compose -f dolphinscheduler.yml down

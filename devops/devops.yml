@@ -1,0 +1,21 @@
+version: '3.6'
+services:
+  web:
+    image: 'registry.gitlab.cn/omnibus/gitlab-jh:14.10.2'
+    # restart: always
+    # hostname: 'gitlab'
+    container_name: gitlab
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        # external_url 'https://192.168.11.11:8880'
+        # Add any other gitlab.rb configuration here, each on its own line
+        letsencrypt['enable'] = false
+    ports:
+      - '8880:80'
+      - '8443:443'
+      - '8022:22'
+    volumes:
+      - './gitlab/config:/etc/gitlab'
+      - './gitlab/logs:/var/log/gitlab'
+      - './gitlab/data:/var/opt/gitlab'
+    shm_size: '256m'

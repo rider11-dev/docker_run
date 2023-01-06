@@ -1,0 +1,1 @@
+docker-compose -f mqtt.yml up -d

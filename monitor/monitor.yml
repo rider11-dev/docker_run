@@ -1,0 +1,36 @@
+version: '3.2'
+services:
+  # prometheus:
+  #   image: prom/prometheus:v2.34.0
+  #   container_name: monitor_prom
+  #   restart: always
+  #   ports:
+  #     - 9090:9090
+  #   command:
+  #     - --config.file=/etc/prometheus/prometheus.yml
+  #   volumes:
+  #     - ./prom/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+  #     - ./prom/data:/prometheus/data
+  
+  gfafana:
+    image: grafana/grafana:8.4.4
+    container_name: monitor_grafana
+    restart: always
+    ports:
+      - 3000:3000
+    # command:
+    #   - --config.file=/etc/grafana/grafana.ini
+    volumes:
+      - ./grafana/grafana.ini:/etc/grafana/grafana.ini:ro
+      - ./grafana/data:/var/lib/grafana
+      - ./grafana/log:/var/log/grafana
+
+  # redis_exporter:
+  #   image: oliver006/redis_exporter:v1.37.0
+  #   container_name: monitor_redis_local
+  #   ports:
+  #     - 9121:9121
+  #   environment:
+  #     REDIS_ADDR: "redis://host.docker.internal:6379"
+    
+# kill -HUP 1

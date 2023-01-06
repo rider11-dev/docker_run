@@ -1,0 +1,13 @@
+version: '3'
+services:
+  redis:
+    image: clickhouse/clickhouse-server:22.2.3.5
+    container_name: clickhouse
+    volumes:
+      - ./data:/var/lib/clickhouse
+      - ./logs:/var/log/clickhouse-server
+      - ./config/config.xml:/etc/clickhouse-server/config.xml
+      - ./config/users.xml:/etc/clickhouse-server/users.xml
+    ports:
+      - 8123:8123/tcp
+      - 9000:9000/tcp

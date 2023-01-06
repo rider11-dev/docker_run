@@ -1,0 +1,14 @@
+version: '3.2'
+
+services:
+  talker:
+    image: osrf/ros:rolling-desktop
+    container_name: ros2_demo_talker
+    command: ros2 run demo_nodes_cpp talker
+  listener:
+    image: osrf/ros:rolling-desktop
+    container_name: ros2_demo_listener
+    command: ros2 run demo_nodes_cpp listener
+    depends_on:
+      - talker
+
