@@ -3,11 +3,12 @@ services:
   mysql57:
     image: mysql/mysql-server:5.7.37
     container_name: mysql57
-    restart: always
+    # restart: always
+    privileged: true
     volumes:
       - ./57/data:/var/lib/mysql
       - ./57/my.cnf:/etc/my.cnf
-      - ./57/agm:/agm # 智慧食堂项目脚本
+      # - ./57/agm:/agm # 智慧食堂项目脚本
     ports:
       - 3307:3306
     environment:

@@ -1,1 +1,1 @@
-docker-compose -f docker-compose.yml --profile database down
+docker compose -f docker compose.yml --profile database down

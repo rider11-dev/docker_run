@@ -1,1 +1,1 @@
-docker-compose -f monitor.yml down
+docker compose -f monitor.yml down

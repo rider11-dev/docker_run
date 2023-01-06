@@ -1,1 +1,1 @@
-docker-compose -f redis.yml up -d
+docker compose -f redis.yml up -d

@@ -1,1 +1,1 @@
-docker-compose -f clickhouse.yml down
+docker compose -f clickhouse.yml down

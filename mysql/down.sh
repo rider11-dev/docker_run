@@ -1,1 +1,1 @@
-docker-compose -f mysql.yml down
+docker compose -f mysql.yml down

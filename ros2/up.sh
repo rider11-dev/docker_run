@@ -1,1 +1,1 @@
-docker-compose -f ros2.yaml up -d
+docker compose -f ros2.yaml up -d

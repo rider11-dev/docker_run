@@ -1,1 +1,1 @@
-docker-compose -f monitor.yml up -d
+docker compose -f monitor.yml up -d

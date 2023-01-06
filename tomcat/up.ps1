@@ -1,1 +1,1 @@
-docker-compose -f tomcat.yml up -d
+docker compose -f tomcat.yml up -d

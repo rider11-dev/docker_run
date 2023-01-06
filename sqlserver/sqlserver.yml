@@ -1,0 +1,14 @@
+version: '3'
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sql2022
+    volumes:
+      - ./data:/var/opt/mssql/data
+    ports:
+      - 1433:1433
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "rider11@sql2022"
+      MSSQL_COLLATION: "Chinese_PRC_CI_AS"
+

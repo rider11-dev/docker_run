@@ -1,1 +1,1 @@
-docker-compose -f mqtt.yml down
+docker compose -f mqtt.yml down

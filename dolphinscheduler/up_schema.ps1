@@ -1,1 +1,1 @@
-docker-compose -f dolphinscheduler.yml --profile schema up -d
+docker compose -f dolphinscheduler.yml --profile schema up -d

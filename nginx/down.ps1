@@ -1,1 +1,0 @@
-docker-compose -f nginx.yml down

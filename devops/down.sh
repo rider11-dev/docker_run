@@ -1,1 +1,1 @@
-docker-compose -f devops.yml down
+docker compose -f devops.yml down

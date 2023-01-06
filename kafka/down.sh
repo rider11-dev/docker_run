@@ -1,1 +1,1 @@
-docker-compose -f kafka.yml down
+docker compose -f kafka.yml down

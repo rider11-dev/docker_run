@@ -1,0 +1,6 @@
+/sqlserver/data
+/mysql/57/data
+/nginx/logs
+/openresty/logs
+/redis/data
+/redis/logs

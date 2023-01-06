@@ -1,1 +1,1 @@
-docker-compose -f nexus.yml up -d
+docker compose -f nexus.yml up -d

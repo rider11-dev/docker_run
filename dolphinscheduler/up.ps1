@@ -1,1 +1,1 @@
-docker-compose -f dolphinscheduler.yml --profile all up -d
+docker compose -f dolphinscheduler.yml --profile all up -d

@@ -1,1 +1,1 @@
-docker-compose -f openresty.yml down
+docker compose -f openresty.yml down

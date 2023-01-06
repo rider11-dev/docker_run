@@ -1,9 +1,9 @@
 version: '3'
 services:
-  redis:
+  openresty:
     image: openresty/openresty:1.19.9.1-5-alpine
     container_name: openresty
-    restart: always
+    # restart: always
     volumes:
       - ./conf.d/:/etc/nginx/conf.d
       - ./logs:/usr/local/openresty/nginx/logs

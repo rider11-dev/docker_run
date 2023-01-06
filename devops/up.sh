@@ -1,1 +1,1 @@
-docker-compose -f devops.yml up -d
+docker compose -f devops.yml up -d

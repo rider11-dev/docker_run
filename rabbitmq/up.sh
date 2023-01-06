@@ -1,1 +1,1 @@
-docker-compose -f rabbitmq.yml up -d
+docker compose -f rabbitmq.yml up -d

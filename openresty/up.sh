@@ -1,1 +1,1 @@
-docker-compose -f openresty.yml up -d
+docker compose -f openresty.yml up -d

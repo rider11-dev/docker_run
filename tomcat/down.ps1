@@ -1,1 +1,1 @@
-docker-compose -f tomcat.yml down
+docker compose -f tomcat.yml down

@@ -1,1 +1,1 @@
-docker-compose -f mysql.yml up -d
+docker compose -f mysql.yml up -d

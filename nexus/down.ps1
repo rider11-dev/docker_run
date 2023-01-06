@@ -1,1 +1,1 @@
-docker-compose -f nexus.yml down
+docker compose -f nexus.yml down
